@@ -1,0 +1,700 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    color: #252525;
+    text-align: center;
+    font-size: 35px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*-----------------------MENU-----------------------*/
+
+header {
+    position: fixed;/*Deja la posicion fija*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.7s;
+    padding: 30px 20px;
+    z-index: 10;
+}
+
+header.abajo {
+    background: #fff;
+    padding: 15px 20px;
+}
+
+header .logo {
+    margin: auto 0;
+    color: #fff;
+    font-size: 2em;
+    transition: 1.5s;
+    text-decoration: none;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.7s;
+}
+
+nav ul li a::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+ nav ul li a:hover::after{
+    width: 100%;
+}
+
+header.abajo .logo,
+header.abajo ul li a {
+    color: black;
+}
+
+/*-----------------------FIN-----------------------*/
+
+/*-----------------------BANNER-----------------------*/
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*nav {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, .5);
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: ease-in-out 0.5s;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+*/
+.hamburguer {
+    width: 80px;
+    height: 80px;
+    display: none;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    transition: color 0.5s ease-in;
+}
+
+.hamburguer> i {
+    font-size: 25px;
+    line-height: 80px;
+    color: #009688;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content img {
+    width: 200px;
+    height: 200px;
+}
+
+.content h1{
+    font-size: 70px;
+    margin-top: 10px;
+}
+
+.content p{
+    margin: 10px auto;
+    font-size: 30px;
+    line-height: 25px;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
+
+/*-----------------------FIN-----------------------*/
+
+/*-----------------------ABOUT-----------------------*/
+
+.about {
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    padding: 100px 40px 60px 40px;
+}
+
+.about-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*Separacion en dos columnas*/
+    gap: 20px;/*Separacion de componentes*/
+}
+
+.about .about-me .resumen p {
+    font-size: 20px;
+    color: #252525;
+    text-align: center;
+}
+
+.about .about-me .especialities table{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.about .about-me .especialities td {
+    width: 150px;
+    height: 150px;
+}
+
+.about .about-me .especialities img{
+  height: 75px;
+  width: 75px;
+}
+
+.button {
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    padding: 0 40px 150px 40px;
+}
+
+.button-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*Separacion en dos columnas*/
+    gap: 20px;/*Separacion de componentes*/
+}
+
+.button .button-div .button-cv {
+    text-align: center;
+}
+
+.button .button-div .button-cv a{
+    width: 130px;
+    display: inline-block;
+    background: #009688;
+    text-align: center;
+    color: #fff;
+    padding: 12px 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.button .button-div .button-cv a:hover{
+    transform: scale(1.05);
+}
+
+.button .button-div .button-ref {
+    text-align: center;
+}
+
+.button .button-div .button-ref a {
+    width: 270px;
+    display: inline-block;
+    background: #009688;
+    text-align: center;
+    color: #fff;
+    padding: 12px 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.button .button-div .button-ref a:hover{
+    transform: scale(1.05);
+}
+/*-----------------------FIN-----------------------*/
+
+
+/*-----------------------PORTAFOLIO-----------------------*/
+
+/*.projects {
+    background: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.projects p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr; Separacion en dos columnas
+    gap: 40px;Separacion de componentes
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}*/
+
+.tituloDiv {
+    padding-top: 80px;
+    text-align: center;
+}
+
+.projects {
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*Separacion en dos columnas*/
+    gap: 20px;/*Separacion de componentes*/
+}
+
+.contenedor figure {
+    position: relative;
+    height: 200px;
+    width: 350px;
+    overflow: hidden;/*Sirve para ocultar el resto del contenido*/
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    cursor: pointer;
+}
+
+.contenedor figure img {
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.contenedor figure .capa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;/*Se oculta el efecto*/
+    text-align: center;
+}
+
+.contenedor figure:hover> .capa {
+    opacity: 1;
+    visibility: visible;/*Se muestra el efecto*/
+}
+
+.contenedor figure:hover> .capa h3 {
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+.contenedor figure:hover> img {
+    transform: scale(1.3);
+}
+
+.contenedor figure .capa h3 {
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 30px;
+}
+
+.contenedor figure .capa p {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+
+.contenedor a {
+    margin-top: 5px;
+    width: 80px;
+    display: inline-block;
+    background: #009688;
+    text-align: center;
+    color: #fff;
+    padding: 5px 0;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.contenedor a:hover{
+    transform: scale(1.05);
+}
+
+/*-----------------------FIN-----------------------*/
+
+/*-----------------------HOBBIES-----------------------*/
+
+.hobbie {
+    background: #f2f2f2;
+}
+
+.hobbie-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.contenedor-hobbie {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: space-around;
+}
+
+.hob {
+    width: 29%;
+    background: #fff;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 45px 30px 60px 30px;
+    transition: 0.5s;
+}
+
+.hob:hover {
+    box-shadow: 0 4px 10px rgba(17, 29, 48, .26);
+}
+
+.hob>i {
+    font-size: 30px;
+    color: #fff;
+    background: #009688;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(113, 181, 223, .46);
+}
+
+.hob>h3 {
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+.hob>p {
+    font-weight: 20px;
+    color: #5D6678;
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+.hob a {
+    margin-top: 5px;
+    width: 80px;
+    display: inline-block;
+    background: #009688;
+    text-align: center;
+    color: #fff;
+    padding: 5px 0;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.hob a:hover{
+    transform: scale(1.05);
+}
+
+/*-----------------------FIN-----------------------*/
+
+/*-----------------------CONTACTO-----------------------*/
+.contacto {
+    background: #f2f2f2;
+}
+
+.contacto-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contacto .contacto-content img{
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 75px;
+    width: 75px;
+    cursor: pointer;
+}
+/*-----------------------FIN-----------------------*/
+
+/*-----------------------FOOTER-----------------------*/
+.footer {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.footer p{
+    text-align: center;
+}
+/*-----------------------FIN-----------------------*/
+
+/*-----------------------BREAKPOINTS-----------------------*/
+@media screen and (max-width:1100px) {
+
+    .about .especialities img{
+          margin: 60px 20px;
+    }
+    .about .documentacionTecnica {
+        margin-left: 70px;
+    }
+}
+
+@media screen and (max-width:851px) {
+
+    .about .about-me p{
+        font-size: 15px;
+    } 
+
+    .about .about-me .resumen a {
+        margin-right: 160px;
+    }
+
+    .about .documentacionTecnica {
+        margin-left: 30px;
+        width: 180px;
+        font-size: 10px;
+    }
+ 
+}
+
+
+@media screen and (max-width:800px) {
+
+    .nav {
+        padding: 0 10px;
+        font-size: 20px;
+    }
+
+    .enlaces-header {
+        position: fixed;
+        background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.8));
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        clip-path: circle(0.0% at 100% 0);
+    }
+
+
+   .nav .menudos {
+        -webkit-clip-path: circle(150% at 100% 0);
+        clip-path: circle(150% at 100% 0);
+    }
+    
+    .nav .enlaces-header a {
+        color: #fff;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    .about {
+        display: flex;
+        justify-content: center
+    }
+
+    .about-me {
+        grid-template-columns: 1fr;
+    }
+
+    .button-div {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        display: flex;
+        justify-content: center
+    }
+
+    .tituloDiv{
+        margin: auto;
+    }
+
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .hob {
+        width: 95%;
+    }
+
+    .hob p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .about .about-me .especialities img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .button .button-div .button-cv  {
+        margin-left: -30px;
+        text-align: left;
+    }
+
+    .button .button-div .button-ref {
+        margin-left: -30px;
+        text-align: left;
+    }
+
+    .button .button-div .button-cv a{
+        width: 100px;
+        font-weight: 300;
+        font-size: 10px;
+    }
+
+    .button .button-div .button-ref a {
+        width: 240px;
+        font-weight: 300;
+        font-size: 10px;;
+    }
+
+
+    .contenedor figure {
+        height: 150px;
+        width: 300px;
+    }
+}
+

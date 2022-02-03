@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Información técnica</title>
+	<link rel="icon" href="img/coding.png"/>
+	<link rel="stylesheet" href="css/estiloInformacionTecnica.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<nav>
+		<p class="inicio">Información recopilada por Rafael Flores</p>
+		<h1>Documentación técnica de Java</h1>
+		<ul>
+			<li class = "indice">Índice</li>
+			<li><a href="#java">¿Qué es Java?</a></li>
+			<li><a href="#jdk">¿Qué es el JDK?</a></li>
+			<li><a href="#jre">¿Qué es el JRE?</a></li>
+			<li><a href="#jvm">¿Qué es la JVM?</a></li>
+			<li><a href="#compilador">Compilador Java</a></li>
+			<li><a href="#tiposDatos">Tipos de datos</a></li>
+			<li><a href="#convencionesJava">Algunas reglas o convenciones de escritura de código Java</a></a></li>
+			<li><a href="#poo">¿Qué es POO?</a></li>
+			<li><a href="#pilares">Pilares de la programación orientada a objetos (Abstracción, Herencia, Encapsulamiento, Polimorfismo)</a></li>
+			<li><a href="#objeto">¿Qué es un objeto?</a></li>
+			<li><a href="#instanciar">¿Qué es instanciar un objecto?</a></li>
+			<li><a href="#clase">¿Qué es una clase?</a></li>
+			<li><a href="#componentesClase">Componentes de una clase</a></li>
+			<li><a href="#claseAbstracta">¿Qué es una Clase Abstracta?</a></li>
+			<li><a href="#interface">¿Qué es una Interface?</a></li>
+			<li><a href="#diferenciasInterface">Diferencias entre clase abstracta e interface</a></li>
+			<li><a href="#overloading">¿Qué es Overloading y Overriding?</a></li>
+			<li><a href="#claseInmutable">¿Qué es y cómo diseñar una clase inmutable?</a></li>
+			<li><a href="#modificadores">¿Qué son los modificadores de Acceso?</a></li>
+			<li><a href="#accesor">Accesor</a></li>
+			<li><a href="#mutator">Mutator</a></li>
+			<li><a href="#string">String, StringBuilder y StringBuffer</a></li>
+			<li><a href="#colecciones">Colecciones</a></li>
+			<li><a href="#arrayList">ArrayList</a></li>
+			<li><a href="#list">List</a></li>
+			<li><a href="#linkedList">LinkedList</a></li>
+			<li><a href="#lamda">Lamdas</a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+		</ul>
+	</nav>
+
+	<section class = "informacion">
+		<div id ="java">
+			<h2>¿Qué es Java?</h2>
+			<p>El origen de la palabra Java proviene de la manía de siempre consumir café por parte de los creadores de esta tecnología uno de ellos fue James Gosling y en EUA a una taza de café se le conoce como Java. <br> 
+			Java es un lenguaje de programación y una plataforma informática. <br>
+			Sirve para crear aplicaciones y procesos en una gran diversidad de dispositivos. <br>
+			Se basa en programación orientada a objetos, permite ejecutar un mismo programa en diversos sistemas operativos y ejecutar el código en sistemas remotos de manera segura. <br>
+			Su ámbito de aplicación es tan amplio que Java se utiliza tanto en móviles como en electrodomésticos. <br> 
+			Java no es una extensión de HTML. <br>
+			Java no tiene nada que ver con JavaScript, ya que su objetivo es totalmente diferente.
+			</p>
+		</div>
+
+		<div id = "jdk">
+			<h2>¿Qué es el JDK?</h2>
+			<p>Java Development Kit Se puede definir como un conjunto de herramientas, utilidades, documentación y ejemplos para desarrollar aplicaciones Java. <br> Puede instalarse en una computadora local o en una unidad de red. <br> El JDK consta de una serie de aplicaciones y componentes, para realizar cada una de las tareas de las que es capaz de encargarse.</p>
+		</div>
+
+		<div id = "jre">
+			<h2>¿Qué es el JRE?</h2>
+			<p>Intérprete en tiempo de ejecución (JRE) Permite la ejecución de los programas Java (*.class) no gráficos (aplicaciones). <br>
+			La Sintaxis para su utilización es la siguiente:
+			java [Opciones] ClaseAEjecutar [Argumentos] <br>
+			Java Runtime Environment o JRE es un conjunto de utilidades que permite la ejecución de programas Java.</p>
+		</div>
+
+		<div id = "jvm">
+			<h2>¿Qué es la JVM?</h2>
+			<p>La Máquina Virtual Java (JVM) es el entorno en el que se ejecutan los programas Java, su misión principal es la de garantizar la portabilidad de las aplicaciones Java. <br> El intérprete Java específico, ejecuta las instrucciones que se guardan en los archivos cuya extensión es .class. <br>
+			Las tareas principales de la JVM son las siguientes: <br>
+			• Reservar espacio en memoria para los objetos creados. <br>
+			• Liberar la memoria no usada (garbage collection). <br>
+			• Asignar variables a registros y pilas. <br>
+			• Llamar al sistema huésped para ciertas funciones, como los accesos a los dispositivos. <br>
+			• Vigilar el cumplimiento de las normas de seguridad de las aplicaciones Java. <br>
+			• Esta última tarea, es una de las más importantes que realiza la JVM. <br>
+			Además, las propias especificaciones del lenguaje Java contribuyen extraordinariamente a este objetivo: <br>
+			Las referencias a arrays son verificadas en el momento de la ejecución del programa, no hay manera de manipular de forma directa los punteros. <br>
+			La JVM gestiona automáticamente el uso de la memoria, de modo que no queden huecos. <br>
+			No se permiten realizar ciertas conversiones (casting) entre distintos tipos de datos. <br>
+			</p>
+		</div>
+
+		<div id = "compilador">
+			<h2>Compilador Java</h2>
+			<p>Se utiliza para compilar archivos de código fuente Java (habitualmente *.java), en archivos de clases Java ejecutables (*.class). Se crea un Archivo de clase para cada clase definida en un archivo fuente. <br>
+			Este compilador es una utilidad en línea de comandos con la siguiente sintaxis: <br>
+			javac [Opciones] ArchivoACompilar <br>
+			Compilar es transformar un lenguaje de alto nivel a lenguaje de bajo nivel.</p>
+		</div>
+
+		<div id = "tiposDatos">
+			<h2>Tipos de datos</h2>
+			<p>Tipos primitivos: no contienen métodos y no necesitan una invocación para ser creados</p>
+			<br>
+			<table border = "2">
+				<tr>
+					<td> Nombre </td>
+					<td> Tipo </td>
+					<td> Ocupa </td>
+				</tr>
+				<tr>
+					<td> byte </td>
+					<td> Entero </td>
+					<td> 1 byte </td>
+				</tr>
+					<tr>
+					<td> short </td>
+					<td> Entero </td>
+					<td> 2 bytes </td>
+				</tr>
+					<tr>
+					<td> int </td>
+					<td> Entero </td>
+					<td> 4 bytes </td>
+				</tr>
+					<tr>
+					<td> long </td>
+					<td> Entero </td>
+					<td> 8 bytes </td>
+				</tr>
+					<tr>
+					<td> float </td>
+					<td> Decimal </td>
+					<td> 4 bytes </td>
+				</tr>
+					<tr>
+					<td> double </td>
+					<td> Decimal </td>
+					<td> 8 bytes </td>
+				</tr>
+					<tr>
+					<td> char </td>
+					<td> Carácter </td>
+					<td> 2 bytes </td>
+				</tr>
+					<tr>
+					<td> boolean </td>
+					<td> True o false </td>
+					<td> 1 byte </td>
+				</tr>
+			</table>
+			<br>
+			<p>Tipos objeto: Necesitan una invocación para ser creados</p>
+			<br>
+			<table border="2">
+				<tr>
+					<td>Tipos de la biblioteca estándar en java</td>
+					<td>Strings, Scanner, TreeSet, ArrayList, etc.</td>
+				</tr>
+				<tr>
+					<td>Tipos definidos por el programador</td>
+					<td>Por ejemplo: Taxi, Planta, Animal, etc.</td>
+				</tr>
+				<tr>
+					<td>Arrays</td>
+					<td>Series de elementos o formación tipo vector o matriz.</td>
+				</tr>
+				<tr>
+					<td>Tipos envoltorio o Wrapper</td>
+					<td>Byte <br> Short <br> Integer <br> Long <br> Float <br> Double </td>
+				</tr>
+			</table>
+
+		</div>
+
+		<div id = "convencionesJava">
+			<h2>Algunas reglas o convenciones de escritura de código Java</h2>
+			<p>• El nombre de las clases debe de iniciar en mayúsculas. <br>
+			• El nombre de los paquetes debe iniciar en minúsculas. <br>
+			• El nombre de los métodos inicia con minúsculas. <br>
+			• El nombre de las variables debe iniciar con minúsculas. <br>
+			• Las variables deben de llevar el nombre correcto al uso que se asignara. <br>
+			• El nombre de las constantes va con mayúsculas acompañadas de la palabra reservada Final.</p>
+		</div>
+
+		<div id = "poo">
+			<h2>POO</h2>
+			<p>La programación orientada a objetos (POO, u OOP según sus siglas en inglés) es un paradigma de programación que usa objetos en sus interacciones, para diseñar aplicaciones y programas informáticos. Está basada en varias técnicas, incluyendo herencia, abstracción, polimorfismo, y encapsulamiento. Este tipo de programación se utiliza para estructurar un programa de software en piezas simples y reutilizables de planos de código (clases) para crear instancias individuales de objetos. En la actualidad, existe una gran variedad de lenguajes de programación que soportan la orientación a objetos.</p>
+			<br>
+			<h3>Ventajas de POO</h3>
+			<br>
+			<p>• Fomenta la reutilización y extensión del código. <br>
+			• Permite crear sistemas más complejos. <br>
+			• Relacionar el sistema al mundo real. <br>
+			• Facilita la creación de programas visuales. <br>
+			• Construcción de prototipos. <br> 
+			• Agiliza el desarrollo de software. <br> 
+			• Facilita el trabajo en equipo. <br> 
+			• Facilita el mantenimiento del software.</p>
+		</div>
+
+		<div id = "pilares">
+			<h2>Pilares de la programación orientada a objetos (Abstracción, Herencia, Encapsulamiento, Polimorfismo)</h2>
+			<br>
+			<h3>Abstracción</h3>
+			<br>
+			<p>Es la capacidad de separar los elementos, para poder verlos de forma singular, como cuando describimos el cuerpo humano y decimos: piernas, brazos, manos.
+			Lo cual permite enfocarse en las características importantes de una situación u objeto, y filtrar o ignorar todas las particularidades no esenciales.</p>
+
+			<br>
+			<h3>Herencia</h3>
+			<br>
+			<p>La herencia básicamente consiste en que una clase puede heredar sus variables y métodos a varias subclases (la clase que hereda es llamada superclase o clase padre). Esto significa que una subclase, aparte de los atributos y métodos propios, tiene incorporados los atributos y métodos heredados de la superclase. De esta manera se crea una jerarquía de herencia. <br>
+			Por ejemplo, imaginemos que estamos haciendo el análisis de un Sistema para una tienda que vende y repara equipos celulares.</p>
+			<br>
+			<img src="img/celular.png" alt="">
+			<br>
+			<br>
+			<h3>Herencia Generalización y Especificación</h3>
+			<br>
+			<p>Generalización: Una clase que comparte atributos y métodos similares con otras clases se le llama superclase o clase padre. Cuando definimos una clase padre estamos generalizando. <br> Especificación: Del mismo modo, cuando definimos una clase a partir de una clase padre estamos creando una subclase que contiene datos especializados de un objeto.</p>
+			<br>
+			<img src="img/generalizacion.png" alt="">
+			<br>
+			<br>
+			<p>Ejemplo:</p>
+			<br>
+			<img src="img/ejemploEmpleado.png" alt="">
+			<br>
+			<br>
+			<p>Como vemos en el diagrama, tendríamos código repetido. Para evitar la repetición, podemos escribir una Clase General (podemos llamarla Clase Empleado) donde tenemos el código que comparten las Clases EmpleadoAsalariado y EmpleadoContratado.</p>
+			<br>
+			<img src="img/generalizacionEjemplo.png" alt="">
+			<br>
+			<br>
+			<h3>¿Cómo se realiza herencia en Java?</h3>
+			<br>
+			<p>La herencia se especifica agregando la palabra extends después del nombre de la clase. En la palabra extends se indica el nombre de la clase base de la cual se hereda. Al heredar de una clase base se hereda tanto los atributos como los métodos generados en la clase base, mientras que los constructores son utilizados, pero no heredados. Esto es una de las bases de la reutilización de código, en lugar de copiar y pegar.</p>
+			<br>		
+			<h3>Encapsulamiento</h3>
+			<br>
+			<p>Se denomina encapsulamiento al ocultamiento del estado, es decir, de los datos miembro de un objeto de manera que sólo se puede cambiar mediante las operaciones definidas para ese objeto. Oculta los detalles de un objeto de otras partes del programa cada objeto está aislado del exterior de forma que la aplicación es un conjunto de objetos que colaboran entre sí, mediante el paso de mensajes invocando sus operaciones o métodos. <br>
+			De esta forma los detalles de implementación permanecen ocultos a las personas que usan las clases, evitando así modificaciones o accesos indebidos a los datos que almacenan las clases. Además, el usuario de la clase no se tiene que preocupar de cómo están implementados los métodos y propiedades, concentrándose solo en cómo debe usarlos. <br>
+			La encapsulación es una de las principales ventajas que proporciona la programación orientada a objetos. <br>
+			Un ejemplo claro de esto, serían los objetos wrapper String, Double, etc, ya que sus métodos se encuentran ocultos.</p>
+			<br>	
+			<h3>Polimorfismo</h3>
+			<br>
+			<p>Se aplica a métodos que adoptan varias formas de implementación según el tipo de objeto, pero cumple siempre el mismo objetivo. Los métodos son polimórficos si se aplican a objetos de distintas clases para conseguir el mismo significado semántico. <br>
+			Por ejemplo, área puede ser implementado tanto para un objeto Cuadrado como para el objeto Circulo. <br>
+			Una de las ventajas del polimorfismo es que se puede hacer una solicitud de una operación sin conocer el método que será llamado, es decir, existe un enlace tardío entre el mensaje y el método. Método área, en una clase Figura, y subclases Cuadrado y Circulo.</p>
+			<br>	
+			<img src="img/polimorfismo.png" alt="">
+			<br>
+			<br>
+			<p>Un ejemplo más de polimorfismo puede ser el crear dos clases distintas: Gato y Perro, que heredan de la superclase Animal. <br>
+			La clase Animal tiene el método abstracto generarSonido() que se implementa de forma distinta en cada una de las subclases (gato y perro) ya que el sonido que emiten, es diferente.</p>
+		</div>
+
+		<div id = "objeto">
+			<h2>¿Qué es un objeto?</h2>
+			<p>Objeto es el concepto clave de la Programación Orientada a Objetos, la idea de objeto es similar a la del mundo real, un objeto puede ser una silla o una mesa. 
+			Los objetos tienen dos características: Un estado y un comportamiento. <br>
+			Un auto es un objeto. <br>
+			También tiene un estado: Cantidad de puertas, color, tamaño, etc. <br>
+			y un comportamiento: acelerar, frenar, subir cambio, bajar cambio, girar izq., girar der., etc. 
+			Un ejemplo más complicado de un objeto podría ser el siguiente: 
+			Objeto: Cuenta bancaria 
+			Atributos: tipo, titular, saldo. 
+			Métodos: Depositar, Extraer
+			</p>
+		</div>
+
+		<div id = "instanciar">
+			<h2>¿Qué es instanciar un objecto?</h2>
+			<p>Es el proceso de generar un ejemplar de una clase, es decir la clase es como una declaración de una forma y el objeto es un caso o elemento concreto que responde a esa forma, por ejemplo: <br><br>
+			ObjectoPadre miObjetoIntancia = new ObjectoPadre();</p>
+		</div>
+
+		<div id = "clase">
+			<h2>¿Qué es una clase?</h2>
+			<p>La clase es un modelo o prototipo que define las variables y métodos comunes a todos los objetos de cierta clase. También se puede mencionar que una clase es una plantilla genérica para un conjunto de objetos de similares características. Una clase define el estado y el comportamiento que todos los objetos creados a partir de esa clase tendrán.</p>
+			<br>
+			<img src="img/claseAve.png" alt="">
+			<br>
+			<br>
+			<p>En resumen</p>
+			<br>
+			<img src="img/resumenClase.png" alt="">
+		</div>
+
+		<div id = "componentesClase">
+			<h2>Componentes de una clase</h2>
+			<p>La estructura de una clase en Java está compuesta por: <br> 
+			• La declaración del paquete. 
+			• Declaración de importación.
+			• Comentarios.
+			• Definición de la clase.
+			• Constantes, variables / atributos, constructores y métodos. <br>
+			Usualmente, todos aparecen en el orden indicado, con excepción de los comentarios que pueden aparecer en cualquier lugar, donde son necesarios. Además, puede contener clases e interfaces anidadas y enumeraciones o tipos Enum.</p>
+		</div>
+
+		<div id = "claseAbstracta">
+			<h2>¿Qué es una Clase Abstracta?</h2>
+			<p>Este tipo de clases nos permiten crear "métodos generales", que recrean un comportamiento común, pero sin especificar cómo lo hacen. A nivel de código tiene por particularidad que algunos de sus métodos no tienen “cuerpo de declaración “. <br>
+			Una clase abstracta puede contener métodos no-abstractos, pero al menos uno de los métodos debe ser declarado abstracto. <br>
+			• Es una clase que declara la existencia de métodos, pero no la implementación de dichos métodos (o sea, las llaves {} y las sentencias entre ellas), se considera una clase abstracta. <br> 
+			• Una clase es declarada abstracta cuando no es posible crear instancias de ella. <br>
+			• Una clase debe ser declarada abstracta si posee al menos un método declarado abstracto. <br>
+			• Un método abstracto es aquel que no posee implementación. <br>
+			• Para declarar una clase o un método como abstractos, se utiliza la palabra reservada abstract. <br>
+			Por ejemplo:<br><br>
+			abstract class Drawing
+			{</p><br>
+			<p class = "funcionParrafo">abstract void miMetodo(int var1, int var2);</p>
+			<p class = "funcionParrafo">String miOtroMetodo () {...}</p>
+			<p>}</p>
+		</div>
+
+		<div id = "interface">
+			<h2>¿Qué es una Interface?</h2>
+			<p>Es un conjunto de métodos abstractos y de constantes cuya funcionalidad es la de determinar el funcionamiento de una clase, es decir, funciona como un molde o como una plantilla. También es una descripción de las acciones que un objeto puede hacer. En programación orientada a objetos, una interfaz X describe todas las funciones que un objeto debe tener para poder ser un X. <br>
+			• Una interface es una variante de una clase abstracta con la condición de que todos sus métodos deben ser abstractos. Si la interface va a tener atributos, éstos deben llevar las palabras reservadas static final y con un valor inicial ya que funcionan como constantes por lo que, por convención, su nombre va en mayúsculas. <br> 
+			• Una clase implementa una o más interfaces (separadas con comas ",") con la palabra reservada implements. <br>
+			• La principal diferencia entre interface y abstract es que una interface proporciona un mecanismo de encapsulación de los protocolos de los métodos sin forzar al usuario a utilizar la herencia. <br>
+			Por ejemplo:</p><br>
+			<p>interface Nave { </p><br>
+			<p class = "funcionParrafo">public void moverPosicion (int x, int y);</p>
+			<p class = "funcionParrafo">public void disparar();</p>
+			<p class = "funcionParrafo">.....</p>
+			<p>}</p><br>
+			<p>public class NaveJugador implements Nave { </p>
+			<br>
+			<p>public void moverPosicion (int x, int y) { </p><br>
+			<p class = "funcionParrafo">//Implementación del método</p>
+			<p class = "funcionParrafo">posActualx = posActualx - x;</p>
+			<p class = "funcionParrafo">posActualy = posActualy - y;</p>
+			<p>}</p><br>  
+			<p>public void disparar() {</p><br>
+			<p class = "funcionParrafo">//Implementación del método</p>
+			<p>}<br>
+			        ... <br><br>
+			}</p>
+		</div>
+
+		<div id = "diferenciasInterface">
+			<h2>Diferencias entre clase abstracta e interface</h2><br>	
+		<table border="2">
+			<tr>
+				<td>Clase Abstracta extends</td>
+				<td>Interfaz implements (Polimorfismo)</td>
+			</tr>
+			<tr>
+				<td>La clase abstracta utiliza la palabra reservada extends.</td>
+				<td>La Interfaz utiliza la palabra reservada implements.</td>
+			</tr>
+			<tr>
+				<td>La palabra clave abstract se usa para crear una clase abstracta y se puede usar con métodos.</td>
+				<td>La palabra clave de interface se usa para crear una interfaz, pero no se puede usar con métodos.</td>
+			</tr>
+			<tr>
+				<td>Una clase puede extender solo una clase abstracta.</td>
+				<td>Una clase puede implementar más de una interfaz.</td>
+			</tr>
+			<tr>
+				<td>Las variables no son definitivas por defecto. Puede contener variables no finales.</td>
+				<td>Las variables son finales por defecto en una interfaz.</td>
+			</tr>
+			<tr>
+				<td>Una clase abstracta puede proporcionar la implementación de una interfaz.</td>
+				<td>Una interfaz no puede proporcionar la implementación de una clase abstracta.</td>
+			</tr>
+			<tr>
+				<td>Puede tener métodos con implementaciones.</td>
+				<td>Proporciona una abstracción absoluta y no puede tener implementaciones de métodos.</td>
+			</tr>
+			<tr>
+				<td>Puede tener modificadores de acceso públicos, privados, estáticos y protegidos.</td>
+				<td>Los métodos son implícitamente públicos y abstractos en la interfaz de Java.</td>
+			</tr>
+			<tr>
+				<td>No admite herencias múltiples.</td>
+				<td>Es compatible con herencias múltiples.</td>
+			</tr>
+			<tr>
+				<td>Es ideal para la reutilización del código y la perspectiva de la evolución.</td>
+				<td>Es ideal para la declaración de tipo.</td>
+			</tr>
+		</table>
+		<br>
+		<p>Las interfaces ayudan a simular la herencia múltiple, ya que una clase puede heredar solo de una superclase, pero puede implementar múltiples interfaces.</p>
+		</div>
+
+		<div id = "overloading">
+			<h2>Sobrecarga de métodos (Overloading)</h2>
+			<p>La sobrecarga permite declarar métodos que se llamen igual pero que reciban parámetros diferentes (no puede haber 2 métodos con el mismo nombre y los mismos parámetros), por esta razón lo que define a que método se ingresa, son los argumentos que se envían como parámetros.</p>
+			<br>
+			<h2>Sobreescritura de métodos (Overriding)</h2>
+			<p>La Sobreescritura es la forma por la cual una clase que hereda puede re-definir los métodos de su clase Padre, de esta manera puede crear nuevos métodos con el mismo nombre de su superclase. La sobreescritura de métodos, también es conocida como polimorfismo en tiempo de ejecución.</p>
+		</div>
+
+		<div id = "claseInmutable">
+			<h2>¿Qué es y cómo diseñar una clase inmutable?</h2>
+			<p>Es simplemente aquella clase, cuyas instancias no pueden ser modificadas una vez que su información ha sido definida. No habrá ninguna modificación a la misma durante su ciclo de vida. <br>
+			Un ejemplo de clase inmutables es la clase String. </p><br>
+			<h3>Para diseñar una clase inmutable, se realiza lo siguiente:</h3><br>
+			<p>• Declarar la clase como final. <br>
+			• Cambiar el modificador de acceso de public a private (Para minimizar el acceso). <br>
+			• Declarar cada atributo como final. <br>
+			• No exponer ningún Mutator. <br>
+			• Exponer los atributos si se necesita, solo con Accesors. <br>
+			• Inicializar con ayuda de los constructores. <br>
+			• Poner especial atención a las colecciones y parámetros de los constructores.</p>
+		</div>
+
+		<div id = "modificadores">
+			<h2>¿Qué son los modificadores de Acceso?</h2>
+			<p>Son palabras claves de los lenguajes de programación orientado a objetos para configurar la accesibilidad a las clases, métodos o propiedades.</p>
+			<br>
+			<img src="img/modificadores.png" alt="">
+		</div>
+
+
+		<div id = "accesor">
+			<h2>Accesor</h2>
+			<p>• Un método Accessor se conoce comúnmente como método get o simplemente getter. <br>
+			• El método de acceso devuelve una propiedad del objeto. <br>
+			• Se declaran como públicas. <br>
+			• Los descriptores de acceso siguen un esquema de nomenclatura, en otras palabras, agregan una palabra para ingresar al comienzo del nombre del método. <br> 
+			• Se utilizan para devolver el valor de un campo privado. <br>
+			• Estos métodos devuelven el mismo tipo de datos en función de su campo privado.</p>
+		</div>
+
+		<div id = "mutator">
+			<h2>Mutator</h2>
+			<p>• Un método de Mutador se conoce comúnmente como método de conjunto o simplemente establecedor (Setter). <br> 
+			• Un método Mutator muta cosas, en otras palabras, cambia cosas. <br>
+			• Nos muestra el principio de encapsulación. <br> 
+			• También se conocen como modificadores, se identifican fácilmente porque comenzaron con el conjunto de palabras. <br>
+			• Se declaran como públicos. <br> 
+			• Los métodos mutadores no tienen ningún tipo de retorno y también aceptan un parámetro del mismo tipo de datos dependiendo de su campo privado. <br>
+			• Después de eso, se usa para establecer el valor del campo privado.</p>
+		</div>
+
+		<div id = "string">
+			<h2>String, StringBuilder y StringBuffer</h2>
+			<p>Java provee distintas clases para el trabajo con cadenas de texto. La más básica es la clase <strong>String</strong>, sin embargo, existen otras clases como <strong>StringBuffer y StringBuilder</strong> que resultan de interés por que facilitan cierto tipo de trabajos y aportan mayor eficiencia en determinados contextos. <br>
+			La clase <strong>StringBuilder</strong> es similar a la clase <strong>String</strong> en el sentido de que sirve para almacenar cadenas de caracteres, no obstante, presenta algunas diferencias relevantes: <br>
+ 			• Su tamaño y contenido pueden modificarse: Los objetos de este tipo son mutables a diferencia de los objetos <strong>String</strong> que son Inmutables (Esto indica que su valor no puede ser modificado). <br>
+			• El rendimiento que ofrece <strong>StringBuilder</strong> es mayor al que ofrece <strong>String</strong>, ya que demora menor tiempo al cargar los valores pasados de un String al concatenarlos, esto puede ser muy eficiente al concatenar datos, por ejemplo, en un email.</p><br>
+			<h3>¿Qué escoger entre String, StringBuilder y StringBuffer?</h3><br>
+			<p>• Si la cadena no va a ser modificada, podemos usar <strong>String</strong>, que es inmutable. <br>
+			• Si la cadena va ser modificada y solo va aser accedida desde un hilo, usaremos <strong>StringBuilder</strong> por su rendimiento. <br>
+			• Si va a ser modificado en un entorno multihilo, usaremos <strong>StringBuffer</strong>, debido a que es <strong>thread-safe</strong>.
+			</p><br>
+			<h3>Thread-safe</h3><br>
+			<p>Se refiere al código que se puede usar o compartir de manera segura en un entorno concurrente o de subproceso múltiples y se comportara como se espera.</p>
+		</div>
+
+		<div id = "colecciones">
+			<h2>Colecciones</h2>
+			<p>Una colección es un objeto que puede almacenar un numero variable de elementos, siendo cada elemento otro objecto siguiendo con nuestro símil, podríamos ver una colección como una caja que contiene mas cajas dentro. Puede haber distintos tipos de colecciones de tamaño flexible, es decir que se pueden encoger o agrandar según las necesidades. <br>
+			Algunos tipos de colección serian:</p>
+		</div>
+
+		<div id = "arrayList">
+			<h3>ArrayList</h3><br>
+			<p>Es una matriz de tamaño variable que se encuentra en el paquete Java.util. La diferencia entre una matriz incorporada y un ArrayList en java, es que el tamaño de una matriz no se puede modificar (Si se desea agregar o eliminar algún elemento de una matriz, se debe crear una nueva). Mientras que los elementos se pueden agregar y eliminar de un ArrayList cuando lo desee.
+			</p>
+		</div>
+
+		<div id = "list">
+			<h3>List</h3><br>
+			<p>Es un conjunto, arrego o estructura de datos dinámicos, crece de acuerdo a la cantidad de elementos que se ingresen y si se elimina un elemento, también reduce su tamaño, es por eso que es considerado la mejor forma de tener datos de forma estructurada, puede ser de tipo de datos primitivos, clases u objetos. <br>
+			La forma de inicializar una lista es la siguiente: <br>
+			<br>
+			List<Integer> numeros = new ArrayList<>(); <br>
+			<br>
+			Si se conoce la capacidad inicial de una lista, se recomienda indicar el tamaño, para asi obtener un mejor rendimiento, por ejemplo: <br>
+			<br>
+			List <<>> lista = new ArrayList(1000); <br> <br>
+			Lista.trimToSize(); -> Elimina el espacio sobrante de memoria de un Array
+			</p>
+			<br>
+			<h3>Iterator</h3><br>
+			<p>es una mejor alternativa para recorrer una estructura, un hash, un árbol binario, etc.</p><br>
+			<br>
+			<p>LinkedList<String> list = new LinkedList<String>();<br>
+			list.add(“a”);<br>
+			list.add(“b”);<br>
+			list.add(“c”);<br>
+			<br>
+			Iterator<String> iterator = list.iterator();<br>
+			String value = iterator.next(); -> .next(); retorna solo una posición de la estructura. <br>
+			System.out.println(value); -> output -> a
+			</p>
+		</div>
+
+		<div id = "linkedList">
+			<h3>LinkedList</h3>
+			<br>
+			<p>• Para agregar datos es más eficiente utilizar LinkedList. <br>
+			• Para obtener datos es mejor utilizar ArrayList. <br>
+			• Para remover datos es más eficiente utilizar LinkedList. <br>
+			• Para eliminar datos es más eficiente utilizar ArrayList. <br>
+			• Esto se debe a que LinkedList tiene referencias de un elemento con otro.</p>
+		</div>
+
+		<div id = "lamda">
+			<h2>Lamdas</h2>
+			<p>La programación declarativa consiste en decirle al programa que es lo que necesitamos a diferencia de la imperativa que es decirle como lo necesitamos. <br>
+			En la programación imperativa se indican todos los pasos para realizar u obtener un objetivo esperado a diferencia del paradigma funcional. Las lamdas son funciones anónimas, esenciales para entender la programación declarativa, la sintaxis básica de una Lamda es: <br>
+			</p>
+			<br>
+			<p class = "funcionParrafo">(parametros) -> expresión </p>
+			<br>
+			<p>Una expresión Lamda es un bloque corto de código que toma parámetro y devuelve un valor. Las expresiones Lamdas son similares a los métodos, pero no necesitan un nombre y se pueden implementar directamente en el cuerpo de un método, para utilizar más de un parámetro dentro de una Lamda, se envuelven entre paréntesis: </p>
+			<br>
+			<p class = "funcionParrafo">(parámetro, parámetro) -> expresión</p>
+			<br>
+			<p>Ejemplo de la utilización de una Lamda: </p>
+			<br>
+			<p>public interface Operación { </p>
+			<br>
+			<p class = "funcionParrafo">Double calcularPromedio(double numeroUno, double numeroDos);</p>
+			<p>}</p>
+			<br>
+			<p>public class LamdaApp {<br>
+				<br>
+			public void ordenar() {</p>
+			<br>
+			<p class = "funcionParrafo">Operación operacion = (double x, double y) -> (x + y) / 2;</p>
+			<p class = "funcionParrafo">System.out.println(operacion.calcularPromedio(2, 3));</p>
+			<p>}<br>
+			}</p>
+
+			<p>public static void main(String []args) {</p>
+			<br>
+			<p class = "funcionParrafo">LamdaApp app = new LamdaApp();</p>
+			<p class = "funcionParrafo">App.ordenar();</p>
+			<p>}</p>
+		</div>
+
+	</section>
+
+	<footer>
+        <div class="footer">
+            <p>© 2022 Copyright Rafael Flores.
+            <br>
+            Derechos reservados.</p>
+        </div>
+    </footer>
+<a href="#" id="toTop" class="fa fa-chevron-up"></a>
+</body>
+</html>

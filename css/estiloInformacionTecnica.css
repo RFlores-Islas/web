@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	text-align: center;
+	font-size: 35px;
+	color: white;
+}
+
+nav {
+	padding-top: 50px;
+	background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/image_1.jpg);
+	background-size: cover;
+    background-position: center;
+    padding-bottom: 50px;
+}
+
+.indice {
+	margin: 10px 0 20px 80px;
+	font-size: 30px;
+	color: white;
+}
+
+.inicio {
+	text-align: right;
+	margin-right: 10px;
+	font-size: 10px;
+}
+
+li {
+	list-style: none;
+	margin-left: 80px;
+	margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+	color: #bd532e;
+}
+
+a:hover {
+	color: #009688;
+}
+
+section {
+	background: radial-gradient(circle, rgba(0,0,0,1), rgba(0,0,0,0.85));
+	background-size: cover;
+    background-position: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+p {
+	color: #d9d5d3;
+	text-align: justify;
+}
+
+.informacion div {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+table {
+	text-align: center;
+	color: #d9d5d3;
+}
+
+h3 {
+	color: white;
+	font-size: 15px;
+}
+
+img {
+	height: 250px;
+	width: 350px;
+}
+
+.funcionParrafo {
+	text-indent: 60px;
+	color: #249c4c;
+}
+
+.footer {
+    background: radial-gradient(circle, rgba(0,0,0,0.85), rgba(0,0,0,0.85));
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.footer p{
+	color: white;
+    text-align: center;
+}
+
+#toTop {
+  display: none;
+  text-decoration: none;
+  position: fixed;
+  bottom: 40px;
+  left: 51%;
+  margin-left: 640px;
+  overflow: hidden;
+  border: none;
+  background-color: #6b6b6b;
+  color: #ffffff;
+  width: 38px;
+  height: 49px;
+  font-size: 22px;
+  line-height: 49px;
+  text-align: center;
+  z-index: 20;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+#toTop:hover {
+  outline: none;
+  color: #00b1ba;
+}
+
+@media screen and (max-width:600px) {
+
+	h1 {
+		font-size: 25px;
+		text-align: center;
+	}
+
+	.indice {
+		font-size: 20px;
+		margin-left: 40px;
+	}
+
+	li {
+		font-size: 15px;
+		margin-left: 40px;
+	}
+
+	h2 {
+		font-size: 15px;
+	}
+
+	p {
+		font-size: 13px;
+	}
+
+	table {
+		font-size: 13px;
+	}
+
+	img {
+		height: 150px;
+		width: 250px;
+	}
+}

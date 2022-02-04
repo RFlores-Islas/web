@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -69,10 +72,11 @@ p {
 }
 
 .informacion div {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	margin-left: 50px;
-	margin-right: 50px;
+	overflow: hidden;
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    padding: 100px 40px 60px 40px;
 }
 
 table {

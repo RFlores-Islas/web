@@ -2,8 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Información técnica</title>
 	<link rel="icon" href="img/coding.png"/>
 	<link rel="stylesheet" href="css/estiloInformacionTecnica.css">
@@ -42,9 +41,16 @@
 			<li><a href="#arrayList">ArrayList</a></li>
 			<li><a href="#list">List</a></li>
 			<li><a href="#linkedList">LinkedList</a></li>
-			<li><a href="#lamda">Lamdas</a></li>
+			<li><a href="#lambda">Lambdas</a></li>
+			<li><a href="#funcional"></a>Interfaz funcional</li>
 			<li><a href=""></a></li>
 			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+			<li><a href="#stream">Stream</a></li>
 			<li><a href=""></a></li>
 		</ul>
 	</nav>
@@ -476,23 +482,23 @@
 			<p>Es un conjunto, arrego o estructura de datos dinámicos, crece de acuerdo a la cantidad de elementos que se ingresen y si se elimina un elemento, también reduce su tamaño, es por eso que es considerado la mejor forma de tener datos de forma estructurada, puede ser de tipo de datos primitivos, clases u objetos. <br>
 			La forma de inicializar una lista es la siguiente: <br>
 			<br>
-			List<Integer> numeros = new ArrayList<>(); <br>
+			List&lt;Integer&gt; numeros = new ArrayList&lt;Integer&gt;(); <br>
 			<br>
 			Si se conoce la capacidad inicial de una lista, se recomienda indicar el tamaño, para asi obtener un mejor rendimiento, por ejemplo: <br>
 			<br>
-			List <<>> lista = new ArrayList(1000); <br> <br>
+			List&lt;Integer&gt; lista = new ArrayList(1000); <br> <br>
 			Lista.trimToSize(); -> Elimina el espacio sobrante de memoria de un Array
 			</p>
 			<br>
 			<h3>Iterator</h3><br>
 			<p>es una mejor alternativa para recorrer una estructura, un hash, un árbol binario, etc.</p><br>
 			<br>
-			<p>LinkedList<String> list = new LinkedList<String>();<br>
+			<p>LinkedList&lt;String&gt; list = new LinkedList&lt;String&gt;();<br>
 			list.add(“a”);<br>
 			list.add(“b”);<br>
 			list.add(“c”);<br>
 			<br>
-			Iterator<String> iterator = list.iterator();<br>
+			Iterator&lt;String&gt; iterator = list.iterator();<br>
 			String value = iterator.next(); -> .next(); retorna solo una posición de la estructura. <br>
 			System.out.println(value); -> output -> a
 			</p>
@@ -508,39 +514,137 @@
 			• Esto se debe a que LinkedList tiene referencias de un elemento con otro.</p>
 		</div>
 
-		<div id = "lamda">
-			<h2>Lamdas</h2>
+		<div id = "lambda">
+			<h2>Lambdas</h2>
 			<p>La programación declarativa consiste en decirle al programa que es lo que necesitamos a diferencia de la imperativa que es decirle como lo necesitamos. <br>
-			En la programación imperativa se indican todos los pasos para realizar u obtener un objetivo esperado a diferencia del paradigma funcional. Las lamdas son funciones anónimas, esenciales para entender la programación declarativa, la sintaxis básica de una Lamda es: <br>
+			En la programación imperativa se indican todos los pasos para realizar u obtener un objetivo esperado a diferencia del paradigma funcional. Las lambdas son funciones anónimas, esenciales para entender la programación declarativa, la sintaxis básica de una Lambda es: <br>
 			</p>
 			<br>
 			<p class = "funcionParrafo">(parametros) -> expresión </p>
 			<br>
-			<p>Una expresión Lamda es un bloque corto de código que toma parámetro y devuelve un valor. Las expresiones Lamdas son similares a los métodos, pero no necesitan un nombre y se pueden implementar directamente en el cuerpo de un método, para utilizar más de un parámetro dentro de una Lamda, se envuelven entre paréntesis: </p>
+			<p class="funcionLambda">(int a, int b) -> a >b;</p>
+			<br>
+			<p class="funciones">(int a, int b) -> System.out.println(a + b); return a + b;</p>
+			<br>
+			<p><p>Una expresión Lambda es una función anónima, básicamente es un método abstracto es decir un método que sólo está definido en una interfaz, pero no implementado, y esa es la clave de las funciones lambda, al no estar implementado, el programador lo puede implementar dónde el crea conveniente sin haber heredado de la interfaz. <br> Para utilizar más de un parámetro dentro de una Lambda, se envuelven entre paréntesis: </p>
 			<br>
 			<p class = "funcionParrafo">(parámetro, parámetro) -> expresión</p>
 			<br>
-			<p>Ejemplo de la utilización de una Lamda: </p>
+			<p>El cuerpo de la expresión puede ir o no dentro de llaves esto puede variar como se ve en los siguientes ejemplos: <br>
 			<br>
-			<p>public interface Operación { </p>
+			Es obligatorio que el cuerpo de una expresión vaya entre llaves en los siguientes casos: <br><br>
+			Cuando devuelve más de un valor o la sentencia tiene más de una instrucción, por ejemplo:
+			</p>
+			<br>
+			<p class="funcionParrafo">(int a, int b) -> {  return a + b; }</p>
+			<br>
+			<p class="funcionParrafo">() -> { return 3.1415 }</p>
+			<br>
+			<p>Mientras que cuando devuelve un sólo valor no es obligatorio, de todas maneras, el compilador no muestra error si se pone entre llaves, por ejemplo:</p>
+			<br>
+			<p class="funcionParrafo">() -> 10 </p>
+			<br>
+			<p class="funcionParrafo">n -> System.out.print(n + » «)</p>
+			<br>
+			<p>Pero se le puede encerrar dentro de llaves, para esto es necesario añadir al final de la sentencia un punto y coma</p>
+			<br>
+			<p class="funcionParrafo">n -> {System.out.print(n + » «);}</p>
+			<br>
+			<p class="funcionParrafo">() -> new ArrayList&lt;Integer&gt;()</p>
+			<br>
+			<p>Ejemplo de la utilización de una Lambda: </p>
+			<br>
+			<p class="funciones">public interface Operación { </p>
 			<br>
 			<p class = "funcionParrafo">Double calcularPromedio(double numeroUno, double numeroDos);</p>
-			<p>}</p>
 			<br>
-			<p>public class LamdaApp {<br>
+			<p class="funciones">}</p>
+			<br>
+			<p class="funciones">public class LambdaApp { </p><br>
 				<br>
-			public void ordenar() {</p>
+			<p class="funciones">public void ordenar() {</p>
 			<br>
 			<p class = "funcionParrafo">Operación operacion = (double x, double y) -> (x + y) / 2;</p>
 			<p class = "funcionParrafo">System.out.println(operacion.calcularPromedio(2, 3));</p>
-			<p>}<br>
-			}</p>
-
-			<p>public static void main(String []args) {</p>
 			<br>
-			<p class = "funcionParrafo">LamdaApp app = new LamdaApp();</p>
+			<p class="funciones">}</p> 
+			<br>
+			<p class="funciones">}</p>
+			<br>
+			<p class="funciones">public static void main(String []args) {</p>
+			<br>
+			<p class = "funcionParrafo">LambdaApp app = new LambdaApp();</p>
 			<p class = "funcionParrafo">App.ordenar();</p>
-			<p>}</p>
+			<br>
+			<p class="funciones">}</p>
+			<br>
+			<h3>Algunos cambios en versiones anteriores comparados con la utilización de lambdas</h3>
+			<br>
+			<p>Recorrer una lista de números en versiones anteriores de Java</p>
+			<br>
+			<p class="funcionLambda">for (Integer numero : Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)) {</p>
+			<br>
+			<p class="funcionParrafo">System.out.print(numero + " ");</p>
+			<br>
+			<p class="funcionLambda">}</p>
+			<br>
+			<p>Recorrer una lista de números utilizando expresiones Lambda en Java</p>
+			<br>
+			<p class="funcionLambda">Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).forEach(n -> System.out.print(n + " "));</p>
+			<br>
+			<p>Otra forma utilizando expresiones Lambdas</p>
+			<br>
+			<p class="funcionLambda">Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).forEach(System.out::println);</p>
+			<p></p>
+		</div>
+
+		<div id="funcional">
+			<h2>Interfaz funcional</h2>
+			<p>Las expresiones Lambda van de la mano con las interfaces funcionales, el concepto de interfaz funcional es añadido con la versión de Java 8 dada la necesidad de las expresiones Lambda. <br>
+			Una interfaz funcional guarda el mismo concepto que una interfaz en las anteriores versiones de Java, salvo que se añade 2 reglas y es que para que una interfaz sea funcional debe: <br>
+			<br>
+			• Tener un sólo método abstracto. <br>
+			• Una interfaz funcional debe implementar los métodos dentro la misma interfaz (esto no se podía hacer en versiones anteriores), para esto se debe anteponer la palabra reservada default al inicio de la declaración del método. <br>
+			<br>
+			Nota: Claro está que sólo un método debe ser abstracto, si la interfaz tuviera más métodos estos deben implementarse dentro de la misma. <br>
+			Así mismo, aunque es opcional se puede declarar la anotación <em>@FunctionalInterface</em>, esta anotación le indica al compilador que esta es una interfaz funcional. <br>
+			<br>
+			Ejemplo sencillo de una interfaz funcional que declara un método para sumar dos números enteros y que retorna su valor. <br>
+			</p>
+			<br>
+			<p class="anotaciones"><em>@FunctionalInterface</em></p>
+			<p class="funciones">public interface IFuncionLambda {</p>
+			<br>
+			<p class="funcionParrafo">public void suma(int a, int b);</p>
+			<br>
+			<p class="funciones">}</p>
+			<br>
+			<p>Ahora viene la implementación del método sumar, en este caso los parámetros están declarados de forma implícita <strong>(a, b)</strong> de manera que el compilador empareje el tipo de dato con el que se encuentra en el método sumar. <br>
+			Luego se encuentra el cuerpo que es la implementación del método y que viene a ser <strong>{ System.out.println(a + b); }</strong>
+			</p>
+			<br>
+			<p class="funciones">public class TestLambdas {</p>
+			<br>
+			<p class="funciones">public static void main(String[] args) {</p>
+			<br>
+			<p class="funcionParrafo">int x = 10;</p>
+			<br>
+			<p class="funcionParrafo">int y = 5;</p>
+			<br>
+			<p class="funcionLambda">IFuncionLambda iflambda = (a, b) -> {System.out.println(a + b);};</p>
+			<br>
+			<p class="funcionLambda">iflambda.suma(x, y);</p>
+			<br>
+			<p class="funciones">}</p>
+			<br>
+			<p class="funciones">}</p>
+
+		</div>
+
+		<div id="stream">
+			<h2>Stream</h2>
+			<p>Se puede decir que los Streams son "envoltorios" de colecciones de datos que nos permiten operar con estas colecciones y hacer que el procesamiento masivo de datos sea rápido y fácil de leer. <br>
+			Java 8 nos permite crear de manera declarativa algoritmos para filtrar, transformar, limitar, contar y más sobre una colección. (Filter, Sorted, Limit, Count, Map del Stream API)</p>
 		</div>
 
 	</section>

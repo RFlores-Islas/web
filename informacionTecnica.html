@@ -207,7 +207,7 @@
 			• Facilita el mantenimiento del software.</p>
 		</div>
 
-		<div id = "pilares">
+		<div class="general" id = "pilares">
 			<h2>Pilares de la programación orientada a objetos (Abstracción, Herencia, Encapsulamiento, Polimorfismo)</h2>
 			<br>
 			<h3>Abstracción</h3>
@@ -285,7 +285,7 @@
 			ObjectoPadre miObjetoIntancia = new ObjectoPadre();</p>
 		</div>
 
-		<div id = "clase">
+		<div class="general" id = "clase">
 			<h2>¿Qué es una clase?</h2>
 			<p>La clase es un modelo o prototipo que define las variables y métodos comunes a todos los objetos de cierta clase. También se puede mencionar que una clase es una plantilla genérica para un conjunto de objetos de similares características. Una clase define el estado y el comportamiento que todos los objetos creados a partir de esa clase tendrán.</p>
 			<br>
@@ -421,7 +421,7 @@
 			• Poner especial atención a las colecciones y parámetros de los constructores.</p>
 		</div>
 
-		<div id = "modificadores">
+		<div class="general" id = "modificadores">
 			<h2>¿Qué son los modificadores de Acceso?</h2>
 			<p>Son palabras claves de los lenguajes de programación orientado a objetos para configurar la accesibilidad a las clases, métodos o propiedades.</p>
 			<br>
@@ -643,7 +643,7 @@
 			Las expresiones Lambda se pueden dividir de la siguiente manera:</p>
 		</div>
 
-		<div id="predicados">
+		<div class="imgcodigo" id="predicados">
 			<h2>Predicados</h2>
 			<p>Los predicados son expresiones que reciben un argumento y devuelven un valor lógico, los cuales usan la interface Predicate&lt;T&gt; por ejemplo:</p>
 			<br>
@@ -654,7 +654,7 @@
 			<p class="funcionLambda">System.out.println(predicate.negate().test("predicado")); // false</p>
 			<br>
 			<p>En el siguiente ejemplo a partir de una lista de números enteros se imprime: los números pares, los números mayores a 5 y los impares.</p>
-			<br>
+<!-- 			<br>
 			<p class="funciones">public class Predicados {</p>
 			<br>
 			<p class="funciones">public static void main(String[] args) {</p>
@@ -662,6 +662,27 @@
 			<br>
 			<p class="funcionParrafo">System.out.println("Números pares:");</p>
 			<p class="metodos">evaluar(listaNumeros, (n)-> n%2 == 0 );</p>
+			<br>
+			<p class="funcionParrafo">System.out.println("Números impares:");</p>
+			<p class="metodos">evaluar(listaNumeros, (n)-> n%2 == 1 );</p>
+			<br>
+			<p class="funcionParrafo">System.out.println("Números mayores a 5:");</p>
+			<p class="metodos">evaluar(listaNumeros, (n)-> n > 5 );</p>
+			<br>
+			<p class="funciones">}</p>
+			<br>
+			<p class="metodos">public static void evaluar(List&lt;Integer&gt; listaNumeros, Predicate&lt;Integer&gt; predicado) {</p>
+			<br>
+			<p class="funcionParrafo">for(Integer n: listaNumeros)  {</p>
+			<p class="funcionParrafo">if(predicado.test(n)) {</p>
+			<p class="funcionParrafo">System.out.print(n + " ");</p>
+			<p class="funcionParrafo">}</p>
+			<p class="funcionParrafo">}</p>
+			<p class="funcionParrafo">System.out.println();</p>
+			<p class="funcionParrafo">}</p>
+			<p >}</p> -->
+			<br>
+			<img src="img/predicado.png" alt="" >
 
 		</div>
 

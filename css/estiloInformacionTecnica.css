@@ -85,7 +85,7 @@ h3 {
 	font-size: 15px;
 }
 
-img {
+.general img {
 	height: 250px;
 	width: 350px;
 }
@@ -117,6 +117,12 @@ img {
 .metodos {
 	text-indent: 60px;
 	color: #6699cc;
+}
+
+.imgcodigo img{
+	position: center;
+	height: 450px;
+	width: 600px;
 }
 
 .footer {

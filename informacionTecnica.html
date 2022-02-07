@@ -44,9 +44,9 @@
 			<li><a href="#lambda">Lambdas</a></li>
 			<li><a href="#funcional">Interfaz funcional</a></li>
 			<li><a href="#predicados">Predicados</a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
-			<li><a href=""></a></li>
+			<li><a href="#funciones">Funciones</a></li>
+			<li><a href="#proveedores">Proveedores</a></li>
+			<li><a href="#consumidor">Consumidor</a></li>
 			<li><a href=""></a></li>
 			<li><a href=""></a></li>
 			<li><a href=""></a></li>
@@ -318,11 +318,8 @@
 			• Un método abstracto es aquel que no posee implementación. <br>
 			• Para declarar una clase o un método como abstractos, se utiliza la palabra reservada abstract. <br>
 			Por ejemplo:<br><br>
-			abstract class Drawing
-			{</p><br>
-			<p class = "funcionParrafo">abstract void miMetodo(int var1, int var2);</p>
-			<p class = "funcionParrafo">String miOtroMetodo () {...}</p>
-			<p>}</p>
+			<br>
+			<img class="claseAbstracta" src="img/claseAbstracta.png" alt="">
 		</div>
 
 		<div id = "interface">
@@ -332,23 +329,11 @@
 			• Una clase implementa una o más interfaces (separadas con comas ",") con la palabra reservada implements. <br>
 			• La principal diferencia entre interface y abstract es que una interface proporciona un mecanismo de encapsulación de los protocolos de los métodos sin forzar al usuario a utilizar la herencia. <br>
 			Por ejemplo:</p><br>
-			<p>interface Nave { </p><br>
-			<p class = "funcionParrafo">public void moverPosicion (int x, int y);</p>
-			<p class = "funcionParrafo">public void disparar();</p>
-			<p class = "funcionParrafo">.....</p>
-			<p>}</p><br>
-			<p>public class NaveJugador implements Nave { </p>
 			<br>
-			<p>public void moverPosicion (int x, int y) { </p><br>
-			<p class = "funcionParrafo">//Implementación del método</p>
-			<p class = "funcionParrafo">posActualx = posActualx - x;</p>
-			<p class = "funcionParrafo">posActualy = posActualy - y;</p>
-			<p>}</p><br>  
-			<p>public void disparar() {</p><br>
-			<p class = "funcionParrafo">//Implementación del método</p>
-			<p>}<br>
-			        ... <br><br>
-			}</p>
+			<img class="imgInterfaceNave" src="img/interfaceNave.png" alt="">
+			<br>
+			<br>
+			<img class="imgImplementacionNave" src="img/implementacionNave.png" alt="">
 		</div>
 
 		<div id = "diferenciasInterface">
@@ -553,7 +538,7 @@
 			<p class="funcionParrafo">() -> new ArrayList&lt;Integer&gt;()</p>
 			<br>
 			<p>Ejemplo de la utilización de una Lambda: </p>
-			<br>
+<!-- 			<br>
 			<p class="funciones">public interface Operación { </p>
 			<br>
 			<p class = "funcionParrafo">Double calcularPromedio(double numeroUno, double numeroDos);</p>
@@ -595,7 +580,7 @@
 			<p>Otra forma utilizando expresiones Lambdas</p>
 			<br>
 			<p class="funcionLambda">Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).forEach(System.out::println);</p>
-			<p></p>
+			<p></p> -->
 		</div>
 
 		<div id="funcional">
@@ -643,53 +628,62 @@
 			Las expresiones Lambda se pueden dividir de la siguiente manera:</p>
 		</div>
 
-		<div class="imgcodigo" id="predicados">
+		<div id="predicados">
 			<h2>Predicados</h2>
 			<p>Los predicados son expresiones que reciben un argumento y devuelven un valor lógico, los cuales usan la interface Predicate&lt;T&gt; por ejemplo:</p>
 			<br>
-			<p class="funcionLambda">Predicate&lt;String&gt; predicate = (s) -> s.length() > 0;</p>
+	<!-- 		<p class="funcionLambda">Predicate&lt;String&gt; predicate = (s) -> s.length() > 0;</p>
 			<p class="comentarios">//evalua si la cadena "predicado" es mayor a 0</p>
 			<p class="funcionLambda">System.out.println(predicate.test("predicado")); // true</p>
 			<p class="comentarios">//niega la valor de la evaulación</p>
-			<p class="funcionLambda">System.out.println(predicate.negate().test("predicado")); // false</p>
+			<p class="funcionLambda">System.out.println(predicate.negate().test("predicado")); // false</p> -->
 			<br>
 			<p>En el siguiente ejemplo a partir de una lista de números enteros se imprime: los números pares, los números mayores a 5 y los impares.</p>
-<!-- 			<br>
-			<p class="funciones">public class Predicados {</p>
 			<br>
-			<p class="funciones">public static void main(String[] args) {</p>
-			<p class="funcionParrafo">List&lt;Integer&gt; listaNumeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7,8,9,10);</p>
-			<br>
-			<p class="funcionParrafo">System.out.println("Números pares:");</p>
-			<p class="metodos">evaluar(listaNumeros, (n)-> n%2 == 0 );</p>
-			<br>
-			<p class="funcionParrafo">System.out.println("Números impares:");</p>
-			<p class="metodos">evaluar(listaNumeros, (n)-> n%2 == 1 );</p>
-			<br>
-			<p class="funcionParrafo">System.out.println("Números mayores a 5:");</p>
-			<p class="metodos">evaluar(listaNumeros, (n)-> n > 5 );</p>
-			<br>
-			<p class="funciones">}</p>
-			<br>
-			<p class="metodos">public static void evaluar(List&lt;Integer&gt; listaNumeros, Predicate&lt;Integer&gt; predicado) {</p>
-			<br>
-			<p class="funcionParrafo">for(Integer n: listaNumeros)  {</p>
-			<p class="funcionParrafo">if(predicado.test(n)) {</p>
-			<p class="funcionParrafo">System.out.print(n + " ");</p>
-			<p class="funcionParrafo">}</p>
-			<p class="funcionParrafo">}</p>
-			<p class="funcionParrafo">System.out.println();</p>
-			<p class="funcionParrafo">}</p>
-			<p >}</p> -->
-			<br>
-			<img src="img/predicado.png" alt="" >
+			<img class="imgPredicados" src="img/predicado.png" alt="" >
 
+		</div>
+
+		<div id="Funciones">
+			<h2>Funciones</h2>
+			<p>Las funciones reciben un argumento y devuelven un resultado, usan la interface Function&lt;T,R&gt;, en el primer ejemplo se obtiene el resultado de una suma y en el segundo ejemplo se muestra el tamaño de una cadena:</p>
+			<br>
+			<img class="imgFunciones" src="img/funciones.png" alt="">
+		</div>
+
+		<div id="proveedores">
+			<h2>Proveedores</h2>
+			<p>Las expresiones Lambda de este tipo no tiene parámetros de entrada, pero si devuelven un resultado, utilizan la interface Supplier&lt;T&gt; <br>
+			Ejemplo basico, que obtiene la cadena enviada a la interface funcional, a través de una expresión Lambda tipo proveedor.
+			</p>
+			<br>
+			<img class="imgProveedores1" src="img/supplierBasico.png" alt="">
+			<br>
+			<p>Un ejemplo un poco más detallado:</p>
+			<br>
+			<img class="imgProveedores2" src="img/proveedorPersona.png" alt="">
+			<br>
+			<p>Se implementa la expresión Lambda que es de tipo proveedor utilizando la clase Supplier.</p>
+			<br>
+			<img class="imgProveedores3" src="img/testProveedor.png" alt="">
+
+		</div>
+
+		<div id = "consumidor">
+			<h2>Consumidor</h2>
+			<p>Utilizan la interfaz Consumer<T>, tienen un sólo argumento de entrada y no devuelven ningún valor, en este ejemplo se usa la misma clase Persona que se utilizó en el ejemplo de tipo proveedor.</p>
+			<br>
+			<img class="imgConsumidor" src="img/consumer.png" alt="">
 		</div>
 
 		<div id="stream">
 			<h2>Stream</h2>
 			<p>Se puede decir que los Streams son "envoltorios" de colecciones de datos que nos permiten operar con estas colecciones y hacer que el procesamiento masivo de datos sea rápido y fácil de leer. <br>
 			Java 8 nos permite crear de manera declarativa algoritmos para filtrar, transformar, limitar, contar y más sobre una colección. (Filter, Sorted, Limit, Count, Map del Stream API)</p>
+		</div>
+
+		<div>
+			
 		</div>
 
 	</section>

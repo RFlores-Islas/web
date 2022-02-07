@@ -17,6 +17,7 @@ nav {
 	background-size: cover;
     background-position: center;
     padding-bottom: 50px;
+    position: relative;
 }
 
 .indice {
@@ -66,6 +67,7 @@ h2 {
 p {
 	color: #d9d5d3;
 	text-align: justify;
+	position: relative;
 }
 
 .informacion div {
@@ -88,6 +90,7 @@ h3 {
 .general img {
 	height: 250px;
 	width: 350px;
+	position: relative;
 }
 
 .funcionParrafo {
@@ -119,10 +122,55 @@ h3 {
 	color: #6699cc;
 }
 
+.claseAbstracta {
+	height: 150px;
+	width: 400px;
+}
+
+.imgInterfaceNave {
+	height: 120px;
+	width: 350px;
+}
+
+.imgImplementacionNave {
+	height: 250px;
+	width: 350px;
+}
+
+.imgPredicados {
+	height: 400px;
+	width: 550px;
+}
+
+.imgFunciones {
+	height: 250px;
+	width: 550px;
+}
+
+.imgProveedores1 {
+	height: 200px;
+	width: 550px;
+}
+
+.imgProveedores2 {
+	height: 650px;
+	width: 500px;
+}
+
+.imgProveedores3 {
+	height: 270px;
+	width: 500px;
+}
+
+.imgConsumidor{
+	height: 250px;
+	width: 550px;
+}
+
 .imgcodigo img{
 	position: center;
-	height: 450px;
-	width: 600px;
+	height: 400px;
+	width: 700px;
 }
 
 .footer {
@@ -194,5 +242,34 @@ h3 {
 	img {
 		height: 150px;
 		width: 250px;
+	}
+
+	.funcionParrafo {
+		text-indent: 1px;
+	}
+
+	.funcionLambda {
+		text-indent: 1px;
+		font-size: 13px;
+	}
+
+	.funciones {
+		text-indent: 1px;
+		font-size: 13px;
+	}
+
+	.anotaciones {
+		text-indent: 1px;
+		font-size: 13px;
+	}
+
+	.comentarios {
+		text-indent: 1px;
+		font-size: 13px;
+	}
+
+	.metodos {
+		text-indent: 1px;
+		font-size: 13px;
 	}
 }

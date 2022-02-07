@@ -2,10 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-	font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -72,11 +69,10 @@ p {
 }
 
 .informacion div {
-	overflow: hidden;
-    max-width: 1000px;
-    width: 90%;
-    margin: auto;
-    padding: 100px 40px 60px 40px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-left: 50px;
+	margin-right: 50px;
 }
 
 table {
@@ -96,7 +92,21 @@ img {
 
 .funcionParrafo {
 	text-indent: 60px;
-	color: #249c4c;
+	color: #99c794;
+}
+
+.funcionLambda {
+	text-indent: 60px;
+	color: #a395c6;
+}
+
+.funciones {
+	text-indent: 60px;
+	color: #aa3f42;
+}
+
+.anotaciones {
+	text-indent: 60px;
 }
 
 .footer {

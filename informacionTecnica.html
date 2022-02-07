@@ -43,7 +43,7 @@
 			<li><a href="#linkedList">LinkedList</a></li>
 			<li><a href="#lambda">Lambdas</a></li>
 			<li><a href="#funcional">Interfaz funcional</a></li>
-			<li><a href=""></a></li>
+			<li><a href="#predicados">Predicados</a></li>
 			<li><a href=""></a></li>
 			<li><a href=""></a></li>
 			<li><a href=""></a></li>
@@ -638,6 +638,30 @@
 			<p class="funciones">}</p>
 			<br>
 			<p class="funciones">}</p>
+			<br>
+			<p>En conclusión una expresión Lambda puede utilizarse donde haya una interfaz funcional que tenga la declaración del método que utiliza la expresión. <br>
+			Las expresiones Lambda se pueden dividir de la siguiente manera:</p>
+		</div>
+
+		<div id="predicados">
+			<h2>Predicados</h2>
+			<p>Los predicados son expresiones que reciben un argumento y devuelven un valor lógico, los cuales usan la interface Predicate&lt;T&gt; por ejemplo:</p>
+			<br>
+			<p class="funcionLambda">Predicate&lt;String&gt; predicate = (s) -> s.length() > 0;</p>
+			<p class="comentarios">//evalua si la cadena "predicado" es mayor a 0</p>
+			<p class="funcionLambda">System.out.println(predicate.test("predicado")); // true</p>
+			<p class="comentarios">//niega la valor de la evaulación</p>
+			<p class="funcionLambda">System.out.println(predicate.negate().test("predicado")); // false</p>
+			<br>
+			<p>En el siguiente ejemplo a partir de una lista de números enteros se imprime: los números pares, los números mayores a 5 y los impares.</p>
+			<br>
+			<p class="funciones">public class Predicados {</p>
+			<br>
+			<p class="funciones">public static void main(String[] args) {</p>
+			<p class="funcionParrafo">List&lt;Integer&gt; listaNumeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7,8,9,10);</p>
+			<br>
+			<p class="funcionParrafo">System.out.println("Números pares:");</p>
+			<p class="metodos">evaluar(listaNumeros, (n)-> n%2 == 0 );</p>
 
 		</div>
 

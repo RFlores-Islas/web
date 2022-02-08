@@ -11,12 +11,12 @@ body {
 h1 {
 	text-align: center;
 	font-size: 35px;
-	color: white;
+	color: #010334;
 }
 
 nav {
 	padding-top: 50px;
-	    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../img/fondoTecnico.jpg');
+	background-color: #f5f5f5;
 	background-size: cover;
     background-position: center;
     padding-bottom: 50px;
@@ -26,7 +26,7 @@ nav {
 .indice {
 	margin: 10px 0 20px 80px;
 	font-size: 30px;
-	color: white;
+	color: #010334;
 }
 
 .inicio {
@@ -43,7 +43,7 @@ li {
 
 a {
     text-decoration: none;
-    color: white;
+    color: #010334;
 }
 
 a:visited {
@@ -55,20 +55,20 @@ a:hover {
 }
 
 section {
-	background: radial-gradient(circle, rgba(0,0,0,1), rgba(0,0,0,0.85));
+	background: #f5f5f5;
 	background-size: cover;
     background-position: center;
 }
 
 h2 {
-    color: white;
+    color: #010334;
     text-align: center;
     font-size: 18px;
     padding-bottom: 5px;
 }
 
 p {
-	color: #d9d5d3;
+	color: #010334;
 	text-align: justify;
 	position: relative;
 }
@@ -82,11 +82,11 @@ p {
 
 table {
 	text-align: center;
-	color: #d9d5d3;
+	color: #010334;
 }
 
 h3 {
-	color: white;
+	color: #010334;
 	font-size: 15px;
 }
 

@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -163,8 +166,8 @@ h3 {
 }
 
 .imgConsumidor{
-	height: 250px;
-	width: 550px;
+	height: 200px;
+	width: 500px;
 }
 
 .imgcodigo img{

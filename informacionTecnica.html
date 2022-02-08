@@ -505,15 +505,13 @@
 			En la programación imperativa se indican todos los pasos para realizar u obtener un objetivo esperado a diferencia del paradigma funcional. Las lambdas son funciones anónimas, esenciales para entender la programación declarativa, la sintaxis básica de una Lambda es: <br>
 			</p>
 			<br>
-			<p class = "funcionParrafo">(parametros) -> expresión </p>
+			<img class="imgLamdaSintaxis" src="img/imgLamdaSintaxis.png" alt="">
 			<br>
-			<p class="funcionLambda">(int a, int b) -> a >b;</p>
-			<br>
-			<p class="funciones">(int a, int b) -> System.out.println(a + b); return a + b;</p>
 			<br>
 			<p><p>Una expresión Lambda es una función anónima, básicamente es un método abstracto es decir un método que sólo está definido en una interfaz, pero no implementado, y esa es la clave de las funciones lambda, al no estar implementado, el programador lo puede implementar dónde el crea conveniente sin haber heredado de la interfaz. <br> Para utilizar más de un parámetro dentro de una Lambda, se envuelven entre paréntesis: </p>
 			<br>
-			<p class = "funcionParrafo">(parámetro, parámetro) -> expresión</p>
+			<img class="imgParametrosLambda" src="img/imgParametrosLambda.png" alt="">
+			<br>
 			<br>
 			<p>El cuerpo de la expresión puede ir o no dentro de llaves esto puede variar como se ve en los siguientes ejemplos: <br>
 			<br>
@@ -521,66 +519,42 @@
 			Cuando devuelve más de un valor o la sentencia tiene más de una instrucción, por ejemplo:
 			</p>
 			<br>
-			<p class="funcionParrafo">(int a, int b) -> {  return a + b; }</p>
+			<img class="imgLambdaParametros" src="img/imgLambdaParametros.png" alt="">
 			<br>
-			<p class="funcionParrafo">() -> { return 3.1415 }</p>
 			<br>
 			<p>Mientras que cuando devuelve un sólo valor no es obligatorio, de todas maneras, el compilador no muestra error si se pone entre llaves, por ejemplo:</p>
 			<br>
-			<p class="funcionParrafo">() -> 10 </p>
+			<img class="imgLambdaValorUnico" src="img/imgLambdaValorUnico.png" alt="">
 			<br>
-			<p class="funcionParrafo">n -> System.out.print(n + » «)</p>
 			<br>
 			<p>Pero se le puede encerrar dentro de llaves, para esto es necesario añadir al final de la sentencia un punto y coma</p>
 			<br>
-			<p class="funcionParrafo">n -> {System.out.print(n + » «);}</p>
+			<img class="imgLambdaValor" src="img/imgLambdaValor.png" alt="">
 			<br>
-			<p class="funcionParrafo">() -> new ArrayList&lt;Integer&gt;()</p>
 			<br>
 			<p>Ejemplo de la utilización de una Lambda: </p>
-<!-- 			<br>
-			<p class="funciones">public interface Operación { </p>
-			<br>
-			<p class = "funcionParrafo">Double calcularPromedio(double numeroUno, double numeroDos);</p>
-			<br>
-			<p class="funciones">}</p>
-			<br>
-			<p class="funciones">public class LambdaApp { </p><br>
-				<br>
-			<p class="funciones">public void ordenar() {</p>
-			<br>
-			<p class = "funcionParrafo">Operación operacion = (double x, double y) -> (x + y) / 2;</p>
-			<p class = "funcionParrafo">System.out.println(operacion.calcularPromedio(2, 3));</p>
-			<br>
-			<p class="funciones">}</p> 
-			<br>
-			<p class="funciones">}</p>
-			<br>
-			<p class="funciones">public static void main(String []args) {</p>
-			<br>
-			<p class = "funcionParrafo">LambdaApp app = new LambdaApp();</p>
-			<p class = "funcionParrafo">App.ordenar();</p>
-			<br>
-			<p class="funciones">}</p>
+ 			<br>
+ 			<img class="imgInterfaceLambda" src="img/imgInterfaceLambda.png" alt="">
+ 			<br>
+ 			<br>
+ 			<img class="imgLambdaApp" src="img/imgLambdaApp.png" alt="">
+ 			<br>
 			<br>
 			<h3>Algunos cambios en versiones anteriores comparados con la utilización de lambdas</h3>
 			<br>
 			<p>Recorrer una lista de números en versiones anteriores de Java</p>
 			<br>
-			<p class="funcionLambda">for (Integer numero : Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)) {</p>
+			<img class="imgArrayList" src="img/imgArrayList.png" alt="">
 			<br>
-			<p class="funcionParrafo">System.out.print(numero + " ");</p>
-			<br>
-			<p class="funcionLambda">}</p>
 			<br>
 			<p>Recorrer una lista de números utilizando expresiones Lambda en Java</p>
 			<br>
-			<p class="funcionLambda">Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).forEach(n -> System.out.print(n + " "));</p>
+			<img class="imgLambdaArray" src="img/imgLambdaArray.png" alt="">
 			<br>
 			<p>Otra forma utilizando expresiones Lambdas</p>
 			<br>
-			<p class="funcionLambda">Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).forEach(System.out::println);</p>
-			<p></p> -->
+			<img class="imgLambdaArray" src="img/imgArrayLambda1.png" alt="">
+			<p></p>
 		</div>
 
 		<div id="funcional">
@@ -597,32 +571,15 @@
 			Ejemplo sencillo de una interfaz funcional que declara un método para sumar dos números enteros y que retorna su valor. <br>
 			</p>
 			<br>
-			<p class="anotaciones"><em>@FunctionalInterface</em></p>
-			<p class="funciones">public interface IFuncionLambda {</p>
+			<img class="imgInterfaceFuncional" src="img/imgInterfaceFuncional.png" alt="">
 			<br>
-			<p class="funcionParrafo">public void suma(int a, int b);</p>
-			<br>
-			<p class="funciones">}</p>
 			<br>
 			<p>Ahora viene la implementación del método sumar, en este caso los parámetros están declarados de forma implícita <strong>(a, b)</strong> de manera que el compilador empareje el tipo de dato con el que se encuentra en el método sumar. <br>
 			Luego se encuentra el cuerpo que es la implementación del método y que viene a ser <strong>{ System.out.println(a + b); }</strong>
 			</p>
 			<br>
-			<p class="funciones">public class TestLambdas {</p>
+			<img class="imgTestLambda" src="img/imgTestLambda.png" alt="">
 			<br>
-			<p class="funciones">public static void main(String[] args) {</p>
-			<br>
-			<p class="funcionParrafo">int x = 10;</p>
-			<br>
-			<p class="funcionParrafo">int y = 5;</p>
-			<br>
-			<p class="funcionLambda">IFuncionLambda iflambda = (a, b) -> {System.out.println(a + b);};</p>
-			<br>
-			<p class="funcionLambda">iflambda.suma(x, y);</p>
-			<br>
-			<p class="funciones">}</p>
-			<br>
-			<p class="funciones">}</p>
 			<br>
 			<p>En conclusión una expresión Lambda puede utilizarse donde haya una interfaz funcional que tenga la declaración del método que utiliza la expresión. <br>
 			Las expresiones Lambda se pueden dividir de la siguiente manera:</p>
@@ -632,11 +589,8 @@
 			<h2>Predicados</h2>
 			<p>Los predicados son expresiones que reciben un argumento y devuelven un valor lógico, los cuales usan la interface Predicate&lt;T&gt; por ejemplo:</p>
 			<br>
-	<!-- 		<p class="funcionLambda">Predicate&lt;String&gt; predicate = (s) -> s.length() > 0;</p>
-			<p class="comentarios">//evalua si la cadena "predicado" es mayor a 0</p>
-			<p class="funcionLambda">System.out.println(predicate.test("predicado")); // true</p>
-			<p class="comentarios">//niega la valor de la evaulación</p>
-			<p class="funcionLambda">System.out.println(predicate.negate().test("predicado")); // false</p> -->
+	 		<img class="imgPredicado" src="img/imgPredicado.png" alt="">
+			<br>
 			<br>
 			<p>En el siguiente ejemplo a partir de una lista de números enteros se imprime: los números pares, los números mayores a 5 y los impares.</p>
 			<br>

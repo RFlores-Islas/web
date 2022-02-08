@@ -16,7 +16,7 @@ h1 {
 
 nav {
 	padding-top: 50px;
-	background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/image_1.jpg);
+	    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../img/fondoTecnico.jpg');
 	background-size: cover;
     background-position: center;
     padding-bottom: 50px;
@@ -96,33 +96,64 @@ h3 {
 	position: relative;
 }
 
-.funcionParrafo {
-	text-indent: 60px;
-	color: #99c794;
+.imgLamdaSintaxis {
+	height: 120px;
+	width: 370px;
 }
 
-.funcionLambda {
-	text-indent: 60px;
-	color: #a395c6;
+.imgParametrosLambda {
+	height: 50px;
+	width: 370px;
 }
 
-.funciones {
-	text-indent: 60px;
-	color: #aa3f42;
+.imgLambdaParametros {
+	height: 90px;
+	width: 370px;
 }
 
-.anotaciones {
-	text-indent: 60px;
+.imgLambdaValorUnico {
+	height: 90px;
+	width: 370px;
 }
 
-.comentarios {
-	text-indent: 60px;
-	font-style: italic;
+.imgLambdaValor {
+	height: 90px;
+	width: 370px;
 }
 
-.metodos {
-	text-indent: 60px;
-	color: #6699cc;
+.imgInterfaceLambda{
+	height: 80px;
+	width: 450px;
+}
+
+.imgLambdaApp {
+	height: 300px;
+	width: 550px;
+}
+
+.imgArrayList {
+	height: 100px;
+	width: 600px;
+}
+
+.imgLambdaArray {
+	height: 30px;
+	width: 600px;
+}
+
+.imgInterfaceFuncional {
+	height: 150px;
+	width: 600px;
+}
+
+.imgTestLambda {
+	height: 250px;
+	width: 600px;
+}
+
+.imgPredicado {
+	height: 150px;
+	width: 600px;
 }
 
 .claseAbstracta {
